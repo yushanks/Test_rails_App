@@ -1,15 +1,25 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FirstWebapp</title>
+    <title>TweetApp</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    
+    <header>
+      <div class="header-logo">
+        <a href="/">TweetApp</a>
+      </div>
+      <ul class="header-menus">
+        <li><a href="/about">TweetAppとは</a></li>
+      </ul>
+    </header>
+    
     <%= yield %>
   </body>
 </html>
