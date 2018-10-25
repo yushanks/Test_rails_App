@@ -11,11 +11,11 @@
 
 <div class="main posts-index">
   <div class="container">
-    <div class="posts-index-item">
-      今日からProgateでRailsの勉強するよー！
-    </div>
-    <div class="posts-index-item">
-      投稿一覧ページ作成中！
-    </div>
+    <% @posts.each do |post| %>
+      <div class="posts-index-item">
+        
+        <%= post.content %>
+      </div>
+    <% end %>
   </div>
 </div>
