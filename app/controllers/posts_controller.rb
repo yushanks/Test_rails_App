@@ -21,4 +21,8 @@ class PostsController < ApplicationController
     	render("posts/new")
     end
   end 
+
+  def edit
+    @post = Post.find_by(id: params[:id])
+  end
 end
