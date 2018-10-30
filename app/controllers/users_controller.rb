@@ -14,13 +14,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(
       name: params[:name],
-      email: params[:email],
-      image_name: "default_user.jpg"
+      email: params[:email]
       )
     if @user.save
       flash[:notice] = "ユーザー登録が完了しました"
       redirect_to("/users/#{@user.id}")
     else
+      flash[:notice] = "ユーザー登録に失敗しました,user/newに遷移します"
       render("users/new")
     end
   end
