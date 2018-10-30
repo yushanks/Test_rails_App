@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       email: params[:email],
       image_name: "default_user.jpg"
     )
-    if @user.save
+    if @user.save == true
       flash[:notice] = "ユーザー登録が完了しました"
       redirect_to("/users/#{@user.id}")
     else
