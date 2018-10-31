@@ -11,13 +11,18 @@
       <div class="post-time">
         <%= @post.created_at %>
       </div>
-
-      <% if @post.user_id == @current_user.id%>
+      <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
+  
+        <%= link_to("いいね！済み", "/likes/#{@post.id}/destroy", {method: "post"}) %>
+      <% else %>
+        <%= link_to("いいね！", "/likes/#{@post.id}/create", {method: "post"}) %>
+      <% end %>
+      <% if @post.user_id == @current_user.id %>
         <div class="post-menus">
           <%= link_to("編集", "/posts/#{@post.id}/edit") %>
           <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
         </div>
-      <%end %>
+      <% end %>
     </div>
   </div>
 </div>
