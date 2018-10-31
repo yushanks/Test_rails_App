@@ -1,3 +1,4 @@
+
 <div class="main user-show">
   <div class="container">
     <div class="user">
@@ -10,11 +11,15 @@
     </div>
     
     <ul class="user-tabs">
-      <li class="active"><%= link_to("投稿", "/users/#{@user.id}") %></li>
-      <li><%= link_to("いいね!", "/users/#{@user.id}/likes") %></li>
+      <li><%= link_to("投稿", "/users/#{@user.id}") %></li>
+      <li class="active"><%= link_to("いいね!", "/users/#{@user.id}/likes") %></li>
     </ul>
     
-    <% @user.posts.each do |post| %>
+    
+    <% @likes.each do |like| %>
+
+      <% post = Post.find_by(id: like.post_id) %>
+      
       <div class="posts-index-item">
         <div class="post-left">
           <img src="<%= "/user_images/#{post.user.image_name}" %>">
@@ -26,6 +31,7 @@
           <%= link_to(post.content, "/posts/#{post.id}") %>
         </div>
       </div>
+    
     <% end %>
   </div>
 </div>
