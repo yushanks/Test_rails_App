@@ -369,12 +369,12 @@ herokuにデプロイする前にgitにpushする必要がある．
 初期化
 
 ## DBのコラムを確認
-
+rails console上で
 ```
 User.column_names
 => ["id", "name", "email", "created_at", "updated_at", "image_name", "password"]
 ```
-
+rails dbconsole上で
 ```
 select * from users;
 ```
