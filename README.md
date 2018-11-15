@@ -374,3 +374,17 @@ herokuにデプロイする前にgitにpushする必要がある．
 User.column_names
 => ["id", "name", "email", "created_at", "updated_at", "image_name", "password"]
 ```
+
+```
+select * from users;
+```
+image_nameを持たないユーザが存在することがわかった
+
+```
+1|testname|jis_test.com|2018-10-29 03:12:28.961306|2018-10-30 08:55:47.988159|1.jpg|nirvana
+2|test|jis_stera.comsss|2018-10-29 03:35:22.473012|2018-10-29 03:46:43.826662||
+3|yushiro|test.com|2018-10-30 07:56:13.703162|2018-10-30 07:56:13.703162||
+4|Yushiro Ishii|jis_ushan@yahoo.co.jp|2018-10-30 09:22:14.267143|2018-10-30 09:22:14.267143|default_user.jpg|test
+5|yuu|wanko@prog-8.com|2018-10-30 09:38:16.516544|2018-11-10 07:27:30.039629|5.jpg|arue
+
+```
