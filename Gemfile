@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.1'
 
 gem 'sqlite3', group: :development
 gem 'pg', group: :production
-
+gem 'bcrypt'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
