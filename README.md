@@ -368,4 +368,9 @@ git push ssh://git@github.com/yushanks/First_app_ralis.git master:master
 herokuにデプロイする前にgitにpushする必要がある．
 初期化
 
+## DBのコラムを確認
+
+```
+User.column_names
+=> ["id", "name", "email", "created_at", "updated_at", "image_name", "password"]
 ```
